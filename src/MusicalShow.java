@@ -1,10 +1,10 @@
 public class MusicalShow extends Show {
-    String musicAuthor;
-    String librettoText;
+    protected String musicAuthor;
+    protected String librettoText;
 
     public MusicalShow(String title, double duration, String musicAuthor, String librettoText) {
-        this.title = title;
-        this.duration = duration;
+        setTitle(title);
+        setDuration(duration);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
     }
@@ -12,8 +12,10 @@ public class MusicalShow extends Show {
 
     @Override
     public String toString () {
-        return "Спектакль " + title + ".\n" +" Краткое описание либретто: " + librettoText +
-                ". Режиссёр: " + listOfDirectors +
+        return "Спектакль " + getTitle() + ".\n" +" Краткое описание либретто: " + librettoText +
+                ". Автор музыки: " + musicAuthor +
+                ". Длительность: " + getDuration() + " ч." +
+                " Режиссёр: " + listOfDirectors +
                 ". Актеры: " + listOfActors +".";
     }
 }

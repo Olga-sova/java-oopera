@@ -1,11 +1,11 @@
 
 
 public class Opera extends MusicalShow {
-    int choirSize;
+    protected int choirSize;
     public Opera(String title,double duration, String musicAuthor,String librettoText,int choirSize) {
         super(title, duration, musicAuthor, librettoText);
-        this.title =title;
-        this.duration =duration;
+        setTitle(title);
+        setDuration(duration);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
         this.choirSize = choirSize;

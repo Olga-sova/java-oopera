@@ -1,14 +1,29 @@
 import  java.util.ArrayList;
 
 public class Show {
-    String title;// название спектакля
-    double duration;//длительность
-    ArrayList<Actor> listOfActors = new ArrayList<>();
+    private String title;// название спектакля
+    private double duration;//длительность
+    protected ArrayList<Actor> listOfActors = new ArrayList<>();
+    protected ArrayList<Director> listOfDirectors = new ArrayList<>();
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
+
+    public String getTitle() {
+        return title;
+    }
     public void addActor(Actor actor) {
         listOfActors.add(actor);
     }
-
-    ArrayList<Director> listOfDirectors = new ArrayList<>();
 
     public void addDirector(Director director) {
         listOfDirectors.add(director);
@@ -25,7 +40,7 @@ public class Show {
         boolean found = false;
         for (int i = 0; i < listOfActors.size(); i++) {
             Actor actor = listOfActors.get(i);
-            if (actor.surname.equals(surname)) {
+            if (actor.getSurname().equals(surname)) {
                 listOfActors.set(i, newActor);
                 found = true;
                 break;
@@ -40,7 +55,7 @@ public class Show {
         boolean found = false;
         for (int i = 0; i < listOfActors.size(); i++) {
             Actor actor = listOfActors.get(i);
-            if (actor.surname.equals(surname)) {
+            if (actor.getSurname().equals(surname)) {
                 listOfActors.set(i, newActor);
                 found = true;
                 break;

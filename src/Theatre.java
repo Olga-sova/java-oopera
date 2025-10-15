@@ -6,17 +6,17 @@ public class Theatre {
     public static void main(String[] args) {
         ArrayList<Actor> listOfActors = new ArrayList<>();
 
-        listOfActors.add(new Actor("Борис", "Оношко", Person.gender.MALE, 1.85));
-        listOfActors.add(new Actor("Алексей", "Пьянков", Person.gender.MALE, 1.75));
-        listOfActors.add(new Actor("Кристина", "Семенова", Person.gender.FEMALE, 1.70));
-        listOfActors.add(new Actor("Виктория", "Дедюлькина", Person.gender.FEMALE, 1.80));
-        listOfActors.add(new Actor("Александр", "Олешко", Person.gender.MALE, 1.80));
+        listOfActors.add(new Actor("Борис", "Оношко", Person.Gender.MALE, 1.85));
+        listOfActors.add(new Actor("Алексей", "Пьянков", Person.Gender.MALE, 1.75));
+        listOfActors.add(new Actor("Кристина", "Семенова", Person.Gender.FEMALE, 1.70));
+        listOfActors.add(new Actor("Виктория", "Дедюлькина", Person.Gender.FEMALE, 1.80));
+        listOfActors.add(new Actor("Александр", "Олешко", Person.Gender.MALE, 1.80));
 
         ArrayList<Director> listOfDirectors = new ArrayList<>();
 
-        listOfDirectors.add(new Director("Надежда", "Калинина", Person.gender.FEMALE, 30));
-        listOfDirectors.add(new Director("Лука", "Джиберти", Person.gender.MALE, 15));
-        listOfDirectors.add(new Director("Валерия", "Беседина", Person.gender.FEMALE, 2));
+        listOfDirectors.add(new Director("Надежда", "Калинина", Person.Gender.FEMALE, 30));
+        listOfDirectors.add(new Director("Лука", "Джиберти", Person.Gender.MALE, 15));
+        listOfDirectors.add(new Director("Валерия", "Беседина", Person.Gender.FEMALE, 2));
 
         MusicalShow musicalShow = new MusicalShow("Кот в сапогах", 1.30, "Валерия Беседина", "Сказка_Шарля_Перро");
         Actor musicalShowActor = listOfActors.get(4);
@@ -32,10 +32,10 @@ public class Theatre {
 
         Actor balletActor = listOfActors.get(3);
         ballet.addActor(balletActor);
-        Actor newBalletActor = new Actor("Ульяна", "Лопаткина", Person.gender.FEMALE, 1.80);
+        Actor newBalletActor = new Actor("Ульяна", "Лопаткина", Person.Gender.FEMALE, 1.80);
         ballet.replaceActor(newBalletActor,"Несуществующая");
 
-        String choreographer = "Надежда Калинина";
+
 
         Opera opera = new Opera("Травиата", 3.30, "Верди", "Дама_с_камелиями", 35);
         Director operaDirector = listOfDirectors.get(1);
@@ -46,7 +46,7 @@ public class Theatre {
                 opera.addActor(listOfActors.get(i));
             }
         }
-        Actor newActor = new Actor("Екатерина", "Пыжова", Person.gender.FEMALE, 1.80);
+        Actor newActor = new Actor("Екатерина", "Пыжова", Person.Gender.FEMALE, 1.80);
         opera.setActor(newActor, "Семенова");
 
 

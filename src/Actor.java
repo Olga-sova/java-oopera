@@ -1,12 +1,11 @@
 import java.util.Objects;
 
 public class Actor extends Person {
-    double height;
+    protected double height;
 
-    public Actor(String name, String surname, Person.gender gender, double height) {
-        this.name = name;
-        this.surname = surname;
-        this.Gender = gender;
+    public Actor(String name, String surname, Person.Gender gender, double height) {
+        super(name, surname);
+        this.gender = gender;
         this.height = height;
 
     }
@@ -14,21 +13,20 @@ public class Actor extends Person {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Actor)) return false;
-        Actor actor = (Actor) o;
+        if (!(o instanceof Actor actor)) return false; // использование паттерн-переменной
         return Double.compare(actor.height, height) == 0 &&
-                Objects.equals(name, actor.name) &&
-                Objects.equals(surname, actor.surname) &&
-                Gender == actor.Gender;
+                Objects.equals(getName(), actor.getName()) &&
+                Objects.equals(getSurname(), actor.getSurname()) &&
+                gender == actor.gender;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, Gender, height);
+        return Objects.hash(getName(),getSurname(), gender, height);
     }
 
     @Override
     public String toString() {
-        return " " + name + " " + surname;
+        return " " + getName() + " " + getSurname();
     }
 }
