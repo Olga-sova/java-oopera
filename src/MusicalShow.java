@@ -9,11 +9,7 @@ public class MusicalShow extends Show {
         this.librettoText = librettoText;
     }
 
-    public void printLibrettoText(String librettoText) {
-        this.librettoText = librettoText;
-        System.out.println(librettoText);
 
-    }
     @Override
     public String toString () {
         return "Спектакль " + title + ".\n" +" Краткое описание либретто: " + librettoText +

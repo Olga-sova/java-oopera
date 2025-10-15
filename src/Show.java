@@ -14,11 +14,7 @@ public class Show {
         listOfDirectors.add(director);
     }
 
-    public void printActorsList() {
-        for (Actor actor : listOfActors) {
-            System.out.println(actor.toString());
-        }
-    }
+
     @Override
     public String toString () {
         return "Спектакль" + title +

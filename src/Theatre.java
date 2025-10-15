@@ -32,6 +32,8 @@ public class Theatre {
 
         Actor balletActor = listOfActors.get(3);
         ballet.addActor(balletActor);
+        Actor newBalletActor = new Actor("Ульяна", "Лопаткина", Person.gender.FEMALE, 1.80);
+        ballet.replaceActor(newBalletActor,"Несуществующая");
 
         String choreographer = "Надежда Калинина";
 
