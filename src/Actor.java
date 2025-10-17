@@ -16,12 +16,12 @@ public class Actor extends Person {
         return Double.compare(actor.height, height) == 0 &&
                 Objects.equals(getName(), actor.getName()) &&
                 Objects.equals(getSurname(), actor.getSurname()) &&
-                gender == actor.gender;
+                getGender() == actor.getGender();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(),getSurname(), gender, height);
+        return Objects.hash(getName(),getSurname(), getGender(), height);
     }
 
     @Override

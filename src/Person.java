@@ -1,7 +1,11 @@
 public class Person {
     private final String name;
     private final  String surname;
-    Gender gender;
+    private final Gender gender;
+
+    public Gender getGender() {
+        return gender;
+    }
 
     public enum Gender {
         MALE,
