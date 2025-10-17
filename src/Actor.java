@@ -4,8 +4,7 @@ public class Actor extends Person {
     protected double height;
 
     public Actor(String name, String surname, Person.Gender gender, double height) {
-        super(name, surname);
-        this.gender = gender;
+        super(name, surname, gender);
         this.height = height;
 
     }

@@ -3,8 +3,7 @@ public class Director extends Person {
     int numberOfShows;
 
     public Director( String name, String surname, Person.Gender gender, int numbersOfShows) {
-        super(name, surname);
-        this.gender = gender;
+        super(name, surname, gender);
         this.numberOfShows = numbersOfShows;
     }
 
